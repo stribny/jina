@@ -89,6 +89,7 @@ class NTLogger:
 
 
 class PrintLogger(NTLogger):
+    """A subclass of NTLogger which log the msg without formatting."""
 
     @staticmethod
     def _planify(msg):
@@ -116,6 +117,8 @@ class SysLogHandlerWrapper(logging.handlers.SysLogHandler):
 
 
 class JinaLogger:
+    """A Logger used in Jina to log messages."""
+
     supported = {'FileHandler', 'StreamHandler', 'SysLogHandler', 'FluentHandler'}
 
     def __init__(self,

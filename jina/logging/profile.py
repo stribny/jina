@@ -74,6 +74,7 @@ class TimeDict:
     """Records of time information."""
 
     def __init__(self):
+        """Initialize a TimeDict."""
         self.accum_time = defaultdict(float)
         self.first_start_time = defaultdict(float)
         self.start_time = defaultdict(float)
